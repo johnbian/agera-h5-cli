@@ -1,0 +1,55 @@
+#!/usr/bin/env node --harmony
+
+'use strict'
+
+process.env.NODE_PATH = __dirname + '/../node_modules/'
+
+const program = require('commander')
+const Project = require('../command/init');
+
+program
+    .version(require('../package').version)
+
+program
+    .usage('<command>')
+
+program
+    .command('add')
+    .description('Add a new template')
+    .alias('a')
+    .action(() => {
+        require('../command/add')()
+    })
+
+program
+    .command('list')
+    .description('List all the templates')
+    .alias('l')
+    .action(() => {
+        require('../command/list')()
+    })
+
+program
+    .command('init')
+    .alias('i')
+    .action(() => {
+        const project = new Project({
+            projectName: '',
+            description: ''
+        });
+        project.create();
+    })
+
+program
+    .command('delete')
+    .description('Delete a template')
+    .alias('d')
+    .action(() => {
+        require('../command/delete')()
+    })
+
+program.parse(process.argv)
+
+if (!program.args.length) {
+    program.help()
+}

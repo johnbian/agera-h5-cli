@@ -1,0 +1,1 @@
+exports.INJECT_FILES = ['package.json'];

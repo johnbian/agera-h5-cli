@@ -1,0 +1,34 @@
+{
+  "name": "agera-h5-cli",
+  "version": "1.0.0",
+  "description": "agera h5 cli",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "agera-h5": "bin/start"
+  },
+  "url": "https://github.com/johnbian/agera-h5-cli",
+  "email": "byh19920310@126.com",
+  "author": {
+    "name": "johnbian",
+    "email": "byh19920310@126.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnbian/agera-h5-cli.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.19.0",
+    "download-git-repo": "^3.0.2",
+    "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0",
+    "mem-fs": "^1.1.3",
+    "mem-fs-editor": "^6.0.0",
+    "ora": "^4.0.3"
+  }
+}
