@@ -1,11 +1,11 @@
 {
   "tpl":{
     "vue-ts-vw":{
-        "url":"direct:http://10.29.36.2/john.bian/vue-ts-vw.git",
+        "url":"direct:https://github.com/johnbian/vue-ts-vant-viewport.git",
         "branch":"master"
     },
     "jquery-MPA":{
-      "url":"direct:http://10.29.36.2/john.bian/jquery-MPA.git",
+      "url":"direct:https://github.com/johnbian/jquery-MPA.git",
       "branch":"master"
     }}
 }
