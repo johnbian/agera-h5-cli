@@ -1,8 +1,12 @@
 {
   "tpl":{
-    "vue-ts-vw":{
+    "vue-ts-mobile":{
         "url":"direct:https://github.com/johnbian/vue-ts-vant-viewport.git",
         "branch":"master"
+    },
+    "vue-ts-pc":{
+      "url":"direct:https://github.com/johnbian/vue-ts-pc-element.git",
+      "branch":"master"
     },
     "jquery-MPA":{
       "url":"direct:https://github.com/johnbian/jquery-MPA.git",

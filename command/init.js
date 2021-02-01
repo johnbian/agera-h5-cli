@@ -35,7 +35,7 @@ Project.prototype.inquire = function() {
     type: 'list',
     name: 'templateName',
     message: '请选择模版：',
-    choices: ['vue-ts-vw', 'jquery-MPA'],
+    choices: ['vue-ts-mobile', 'jquery-MPA', 'vue-ts-pc'],
   });
   prompts.push({
     type: 'input',
@@ -153,9 +153,9 @@ Project.prototype.generate = function() {
 
         // 安装依赖
         console.log();
-        const installSpinner = ora(`安装项目依赖 ${chalk.green.bold('npm install')}, 请稍后...`);
+        const installSpinner = ora(`安装项目依赖 ${chalk.green.bold('install')}, 请稍后...`);
         installSpinner.start();
-        exec('npm install', (error, stdout, stderr) => {
+        exec('yarn', (error, stdout, stderr) => {
           if (error) {
             installSpinner.color = 'red';
             installSpinner.fail(chalk.red('安装项目依赖失败，请自行重新安装！'));
