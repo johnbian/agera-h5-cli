@@ -4,6 +4,10 @@
         "url":"direct:https://github.com/johnbian/vue-ts-vant-viewport.git",
         "branch":"master"
     },
+    "vue-3-ts-mobile":{
+      "url":"direct:https://github.com/johnbian/vue-v3-ts.git",
+      "branch":"master"
+  },
     "vue-ts-pc":{
       "url":"direct:https://github.com/johnbian/vue-ts-pc-element.git",
       "branch":"master"

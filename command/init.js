@@ -35,7 +35,7 @@ Project.prototype.inquire = function() {
     type: 'list',
     name: 'templateName',
     message: '请选择模版：',
-    choices: ['vue-ts-mobile', 'jquery-MPA', 'vue-ts-pc'],
+    choices: ['vue-ts-mobile', 'vue-3-ts-mobile', 'jquery-MPA', 'vue-ts-pc'],
   });
   prompts.push({
     type: 'input',
