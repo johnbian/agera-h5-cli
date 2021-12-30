@@ -7,9 +7,13 @@
     "vue-3-ts-mobile":{
       "url":"direct:https://github.com/johnbian/vue-v3-ts.git",
       "branch":"master"
-  },
+    },
     "vue-ts-pc":{
       "url":"direct:https://github.com/johnbian/vue-ts-pc-element.git",
+      "branch":"master"
+    },
+    "react-17-ts":{
+      "url":"direct:https://github.com/johnbian/react-ts-17.git",
       "branch":"master"
     },
     "jquery-MPA":{
