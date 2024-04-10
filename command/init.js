@@ -31,11 +31,12 @@ Project.prototype.create = function() {
 Project.prototype.inquire = function() {
   const prompts = [];
   const { projectName, description } = this.config;
+  const choices = Object.keys(templateList.tpl);
   prompts.push({
     type: 'list',
     name: 'templateName',
     message: '请选择模版：',
-    choices: ['vue-ts-mobile', 'vue-3-ts-mobile', 'jquery-MPA', 'vue-ts-pc', 'react-17-ts'],
+    choices,
   });
   prompts.push({
     type: 'input',
@@ -91,16 +92,16 @@ Project.prototype.injectTemplate = function(source, dest, data) {
 
 Project.prototype.generate = function() {
   const { templateName, projectName, description } = this.config;
-  console.log(`templateName${templateName}`)
   const projectPath = path.join(process.cwd(), projectName);
   const downloadPath = path.join(projectPath, '__download__');
 
   const downloadSpinner = ora('正在下载模板，请稍等...');
   downloadSpinner.start();
   const templateUrl = templateList.tpl[templateName].url;
-  console.log(templateUrl)
+  const branch = templateList.tpl[templateName].branch || 'master';
+  const repoUrl = `${templateUrl}#${branch}`.indexOf('direct:') > -1 ? `${templateUrl}#${branch}` : `direct:${templateUrl}#${branch}`
   // 下载git repo
-  download(templateUrl, downloadPath, { clone: true }, (err) => {
+  download(repoUrl, downloadPath, { clone: true }, (err) => {
     if (err) {
       downloadSpinner.color = 'red';
       downloadSpinner.fail(err.message);
